@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error" strict="true" name="XMLConfigTest">
+  <Appenders>
+    <Appender type="Console" name="DEFAULT">
+      <Layout type="PatternLayout" pattern="%d{HH:mm:ss.SSS} %5level: %msg [%t]%n%throwable"/>
+    </Appender>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="DEFAULT"/>
+    </Root>
+  </Loggers>
+
+</Configuration>
