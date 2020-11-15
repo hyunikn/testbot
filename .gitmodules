@@ -1,0 +1,3 @@
+[submodule "json-schema"]
+	path = json-schema
+	url = https://github.com/hyunikn/json-schema.git
