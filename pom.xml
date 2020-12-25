@@ -7,8 +7,8 @@
     <version>0.8-SNAPSHOT</version>
 
     <name>testbot</name>
-    <description>a library that parses, stringifies and manipulates JSON</description>
-    <url>https://github.com/hyunikn/json-den-java</url>
+    <description> a test automation framework that runs test scenarios </description>
+    <url>https://github.com/hyunikn/testbot</url>
     <licenses>
         <license>
             <name>bsd-2</name>
@@ -23,7 +23,7 @@
         </developer>
     </developers>
     <scm>
-        <url>https://github.com/hyunikn/json-den-java</url>
+        <url>https://github.com/hyunikn/testbot</url>
     </scm>
 
     <properties>
