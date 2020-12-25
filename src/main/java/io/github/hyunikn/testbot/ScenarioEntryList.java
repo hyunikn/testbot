@@ -1,6 +1,6 @@
 package io.github.hyunikn.testbot;
 
-import io.github.hyunikn.testbot.annot.InspectionsOnError;
+import io.github.hyunikn.testbot.annot.InspectionOnError;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -69,15 +69,15 @@ public class ScenarioEntryList {
                     entryCls = (Class<ScenarioEntry>) Class.forName(prefix + name);
 
                     if (actionName != null) {
-                        // check the inspections-on-error if any
-                        InspectionsOnError ioe = (InspectionsOnError) entryCls.getAnnotation(InspectionsOnError.class);
+                        // check the inspection-on-error if any
+                        InspectionOnError ioe = (InspectionOnError) entryCls.getAnnotation(InspectionOnError.class);
                         if (ioe != null) {
                             String[] inspectionNames = ioe.value();
                             if (inspectionNames == null) {
-                                throw new Error("action class " + actionName + " has null inspections");
+                                throw new Error("action class " + actionName + " has null inspection");
                             }
                             if (inspectionNames.length == 0) {
-                                throw new Error("action class " + actionName + " has empty inspections");
+                                throw new Error("action class " + actionName + " has empty inspection");
                             }
 
                             for (String n: inspectionNames) {
@@ -89,7 +89,7 @@ public class ScenarioEntryList {
                             }
 
                             if (inspectionNames.length != dupCheckSet.size()) {
-                                throw new Error("action class " + actionName + " has a duplicate entry in inspections");
+                                throw new Error("action class " + actionName + " has a duplicate entry in inspection");
                             }
                         }
                     }
@@ -202,9 +202,9 @@ public class ScenarioEntryList {
                             }
                         }
                     } else {
-                        // run the inspections-on-error if any
-                        InspectionsOnError ioe;
-                        ioe = (InspectionsOnError) a.getClass().getAnnotation(InspectionsOnError.class);
+                        // run the inspection-on-error if any
+                        InspectionOnError ioe;
+                        ioe = (InspectionOnError) a.getClass().getAnnotation(InspectionOnError.class);
                         if (ioe != null) {
                             String[] inspectionNames = ioe.value();
                             for (String n: inspectionNames) {
