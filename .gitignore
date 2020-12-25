@@ -1,9 +1,3 @@
 target/
-find-bad-merge-workdir/
-test-driver-runnable/
-my-test/
 *.swp
 conf.json
-conf.dev.json
-conf.koscom.json
-temp.sh
